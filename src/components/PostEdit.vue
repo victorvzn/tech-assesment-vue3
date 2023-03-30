@@ -11,7 +11,6 @@
       <textarea v-model="formEditPost.body" />
     </label>
     <button>Save</button>
-    <button type="reset">Clean</button>
   </form>
 </template>
 

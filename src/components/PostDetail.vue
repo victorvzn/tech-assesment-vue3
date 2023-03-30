@@ -1,13 +1,14 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
 import { usePostsStore } from "../stores/posts"
 
 import PostEdit from '../components/PostEdit.vue'
 
-const postsStore = usePostsStore()
+const { getPost } = usePostsStore()
 
-const post = postsStore.getPost()
+const post = computed(() => getPost());
 </script>
 
 <template>
@@ -19,8 +20,6 @@ const post = postsStore.getPost()
       <h2 class="post-item__title">{{ post.title }}</h2>
       <p class="post-item__body">{{  post.body }}</p>
     </article>
-
-    <pre style="color:red;">{{ post }}</pre>
 
     <PostEdit />
   </main>
