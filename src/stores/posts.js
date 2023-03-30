@@ -45,10 +45,6 @@ export const usePostsStore = defineStore('posts', {
       state.post.edited = postsFromLocalStorage[postIndexFound]
 
       return state.post.edited
-    },
-    isEditedPost: (state) => {
-      const edited = state?.post?.edited
-      return Object.entries(edited).length !== 0
     }
   },
   actions: {

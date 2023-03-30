@@ -105,20 +105,11 @@ button:focus-visible {
   background-color: #fefefe;
 }
 
-.post-item__title {
-
-}
-
 .post-item__body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.post-edit-form {
-
-}
-
 
 .post-edit-form {
   display: flex;
@@ -148,7 +139,8 @@ button:focus-visible {
   text-align: left;
 }
 
-.post-edit-form input {
+.post-edit-form input,
+.post-edit-form textarea {
   width: 100%;
 }
 

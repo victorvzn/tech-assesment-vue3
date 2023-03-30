@@ -5,15 +5,17 @@ import PostList from '../components/PostList.vue'
 
 import { usePostsStore } from "../stores/posts"
 
-const postsStore = usePostsStore()
+const { fetchPosts, isLoading } = usePostsStore()
 
 onBeforeMount(async () => {
-  await postsStore.fetchPosts()
+  await fetchPosts()
 })
 </script>
 
 <template>
   <h1>Post List</h1>
 
-  <PostList />
+  <div v-if="isLoading">Cargando...</div>
+  
+  <PostList v-else />
 </template>

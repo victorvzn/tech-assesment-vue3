@@ -1,14 +1,14 @@
 <template>
   <form class="post-edit-form" @submit.prevent="onSubmit">
     <h3>Edit post</h3>
-    <input type="text" v-model="formEditPost.id" />
+    <input type="hidden" v-model="formEditPost.id" />
     <label>
       <span>Title</span>
       <input name="postTitle" required v-model="formEditPost.title" />
     </label>
     <label>
       <span>Body</span>
-      <textarea v-model="formEditPost.body" />
+      <textarea v-model="formEditPost.body" rows="8" />
     </label>
     <button>Save</button>
   </form>
